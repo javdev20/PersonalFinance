@@ -1,6 +1,7 @@
 package gui;
 
 import gui.menu.MainMenu;
+import settings.Text;
 
 import javax.swing.*;
 
@@ -9,7 +10,7 @@ public class MainFrame extends JFrame {
     private final MainMenu mainMenu;
 
     public MainFrame() {
-        super("Personal Finance");
+        super(Text.get("PROGRAMM_NAME"));
 
         mainMenu = new MainMenu(this);
         setJMenuBar(mainMenu);

@@ -1,6 +1,8 @@
 package gui.menu;
 
 import gui.MainFrame;
+import settings.Text;
+
 import javax.swing.*;
 
 public class MainMenu extends JMenuBar {
@@ -14,11 +16,11 @@ public class MainMenu extends JMenuBar {
     }
 
     private void init() {
-        JMenu file = new JMenu("File");
-        JMenu edit = new JMenu("Edit");
-        JMenu view = new JMenu("View");
-        JMenu settings = new JMenu("Settings");
-        JMenu help = new JMenu("Help");
+        JMenu file = new JMenu(Text.get("MENU_FILE"));
+        JMenu edit = new JMenu(Text.get("MENU_EDIT"));
+        JMenu view = new JMenu(Text.get("MENU_VIEW"));
+        JMenu settings = new JMenu(Text.get("MENU_SETTINGS"));
+        JMenu help = new JMenu(Text.get("MENU_HELP"));
 
         add(file);
         add(edit);
