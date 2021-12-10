@@ -48,5 +48,14 @@ final public class Text {
         data.put("BALANCE_CURRENCIES", "Баланс по валютам");
 
         data.put("LAST_TRANSACTIONS", "Last transactions");
+
+        data.put("TOOLBAR_OVERVIEW", "Overview");
+        data.put("TOOLBAR_ACCOUNTS", "Accounts");
+        data.put("TOOLBAR_ARTICLES", "Articles");
+        data.put("TOOLBAR_TRANSACTIONS", "Transactions");
+        data.put("TOOLBAR_TRANSFERS", "Transfers");
+        data.put("TOOLBAR_CURRENCIES", "Currencies");
+        data.put("TOOLBAR_STATISTICS", "Statistics");
+
     }
 }

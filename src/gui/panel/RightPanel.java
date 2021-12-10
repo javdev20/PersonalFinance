@@ -1,6 +1,7 @@
 package gui.panel;
 
 import gui.MainFrame;
+import settings.Style;
 import settings.Text;
 
 import javax.swing.*;
@@ -16,7 +17,7 @@ public class RightPanel extends AbstractPanel{
     @Override
     protected void init() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        setBorder(new EmptyBorder(10, 10, 10, 10));
+        setBorder(Style.BORDER_PANEL);
         JLabel headerBC = new JLabel(Text.get("LAST_TRANSACTIONS"));
         headerBC.setAlignmentX(JComponent.CENTER_ALIGNMENT);
 

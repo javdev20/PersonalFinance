@@ -3,6 +3,7 @@ package gui;
 import gui.menu.MainMenu;
 import gui.panel.LeftPanel;
 import gui.panel.RightPanel;
+import gui.toolbar.MainToolBar;
 import settings.Text;
 
 import javax.swing.*;
@@ -15,6 +16,7 @@ public class MainFrame extends JFrame {
     private final MainMenu mainMenu;
     private final LeftPanel leftPanel;
     private RightPanel rightPanel;
+    private final MainToolBar toolBar;
 
     public MainFrame() {
         super(Text.get("PROGRAMM_NAME"));
@@ -25,6 +27,13 @@ public class MainFrame extends JFrame {
         setLayout(new GridBagLayout());
 
         constraints = new GridBagConstraints();
+
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.gridwidth = 2;
+
+        toolBar = new MainToolBar();
+        add(toolBar, constraints);
 
         constraints.gridy = 1;
         constraints.gridwidth = 1;
