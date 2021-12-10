@@ -44,5 +44,7 @@ final public class Text {
         data.put("MENU_SETTINGS_LANGUAGE_ENGLISH", "Английский");
 
         data.put("MENU_HELP_ABOUT", "О программе");
+
+        data.put("BALANCE_CURRENCIES", "Баланс по валютам");
     }
 }
