@@ -20,6 +20,7 @@ public class LeftPanel extends AbstractPanel{
         setBorder(Style.BORDER_LEFT_PANEL);
         JLabel headerBC = new JLabel(Text.get("BALANCE_CURRENCIES"));
         headerBC.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+        headerBC.setIcon(Style.ICON_LEFT_PANEL_BALANCE_CURRENCIES);
 
         add(headerBC);
 

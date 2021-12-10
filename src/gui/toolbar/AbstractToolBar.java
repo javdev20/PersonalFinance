@@ -17,8 +17,8 @@ abstract public class AbstractToolBar extends JPanel {
     
     abstract protected void init();
     
-    protected MainButton addButton(String title) {
-        MainButton button = new MainButton(title);
+    protected MainButton addButton(String title, ImageIcon icon) {
+        MainButton button = new MainButton(title, icon);
         add(button);
         return button;
     }

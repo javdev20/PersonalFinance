@@ -5,7 +5,6 @@ import settings.Style;
 import settings.Text;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 
 public class RightPanel extends AbstractPanel{
 

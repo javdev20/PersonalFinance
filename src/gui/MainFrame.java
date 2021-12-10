@@ -4,6 +4,7 @@ import gui.menu.MainMenu;
 import gui.panel.LeftPanel;
 import gui.panel.RightPanel;
 import gui.toolbar.MainToolBar;
+import settings.Style;
 import settings.Text;
 
 import javax.swing.*;
@@ -48,6 +49,7 @@ public class MainFrame extends JFrame {
         add(rightPanel, constraints);
 
         setResizable(false);
+        setIconImage(Style.ICON_MAIN.getImage());
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         setVisible(true);
