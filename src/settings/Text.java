@@ -46,5 +46,7 @@ final public class Text {
         data.put("MENU_HELP_ABOUT", "О программе");
 
         data.put("BALANCE_CURRENCIES", "Баланс по валютам");
+
+        data.put("LAST_TRANSACTIONS", "Last transactions");
     }
 }
