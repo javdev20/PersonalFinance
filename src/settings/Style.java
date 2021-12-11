@@ -2,6 +2,7 @@ package settings;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import java.awt.*;
 
 final public class Style {
 
@@ -87,4 +88,5 @@ final public class Style {
     public static final ImageIcon ICON_PANEL_CURRENCIES = new ImageIcon("images/currencies_panel.png");
     public static final ImageIcon ICON_PANEL_STATISTICS = new ImageIcon("images/statistics_panel.png");
 
+    public static final Dimension DIMENSION_PADDING_BALANCE = new Dimension(10, 0);
 }
