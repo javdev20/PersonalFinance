@@ -2,8 +2,10 @@ package model;
 
 abstract public class Common {
 
+    public Common() {}
+
     //вернуть строку для выпадающего списка
-    public String getValutForComboBox() {
+    public String getValueForComboBox() {
         return null;
     }
 

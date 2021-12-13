@@ -1,17 +1,17 @@
-package Exception;
+package exception;
 
 public class ModelException extends Exception{
 
-    private final static int TITLE_EMPTY = 1;
-    private final static int IS_EXISTS = 2;
-    private final static int DATE_FORMAT = 3;
-    private final static int CODE_EMPTY = 4;
-    private final static int CURRENCY_EMPTY = 5;
-    private final static int ARTICLE_EMPTY = 6;
-    private final static int ACCOUNT_EMPTY = 7;
-    private final static int RATE_INCORRECT = 8;
-    private final static int AMOUNT_FORMAT = 9;
-    private final static int NO_BASE_CURRENCY = 10;
+    public final static int TITLE_EMPTY = 1;
+    public final static int IS_EXISTS = 2;
+    public final static int DATE_FORMAT = 3;
+    public final static int CODE_EMPTY = 4;
+    public final static int CURRENCY_EMPTY = 5;
+    public final static int ARTICLE_EMPTY = 6;
+    public final static int ACCOUNT_EMPTY = 7;
+    public final static int RATE_INCORRECT = 8;
+    public final static int AMOUNT_FORMAT = 9;
+    public final static int NO_BASE_CURRENCY = 10;
 
     private final int code;
 
