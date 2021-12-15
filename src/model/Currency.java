@@ -1,6 +1,7 @@
 package model;
 
 import exception.ModelException;
+import saveload.SaveData;
 
 import java.util.Objects;
 
@@ -9,8 +10,8 @@ public class Currency extends Common{
     private String title;
     private String code;
     private double rate;
-    private boolean isOn;
-    private boolean isBase;
+    private boolean on;
+    private boolean base;
 
     public Currency() {
     }
@@ -23,8 +24,8 @@ public class Currency extends Common{
         this.title = title;
         this.code = code;
         this.rate = rate;
-        this.isOn = isOn;
-        this.isBase = isBase;
+        this.on = isOn;
+        this.base = isBase;
     }
 
     public String getTitle() {
@@ -52,19 +53,19 @@ public class Currency extends Common{
     }
 
     public boolean isOn() {
-        return isOn;
+        return on;
     }
 
     public void setOn(boolean on) {
-        isOn = on;
+        this.on = on;
     }
 
     public boolean isBase() {
-        return isBase;
+        return base;
     }
 
     public void setBase(boolean base) {
-        isBase = base;
+        this.base = base;
     }
 
     @Override
@@ -73,8 +74,8 @@ public class Currency extends Common{
                 "title='" + title + '\'' +
                 ", code='" + code + '\'' +
                 ", rate=" + rate +
-                ", isOn=" + isOn +
-                ", isBase=" + isBase +
+                ", isOn=" + on +
+                ", isBase=" + base +
                 '}';
     }
 
@@ -111,5 +112,40 @@ public class Currency extends Common{
 
     public double getRateByCurrency(Currency currency) {
         return rate / currency.rate;
+    }
+
+    @Override
+    public void postAdd(SaveData sd) {
+        clearBase(sd);
+    }
+
+    @Override
+    public void postEdit(SaveData sd) {
+        clearBase(sd);
+        for (Currency c : sd.getCurrencies()) {
+            for (Account a : sd.getAccounts()) {
+                if (a.getCurrency().equals(c)) a.setCurrency(c);
+            }
+            for (Transaction t : sd.getTransactions())
+                if (t.getAccount().getCurrency().equals(c)) t.getAccount().setCurrency(c);
+            for (Transfer t : sd.getTransfers()) {
+                if (t.getFromAccount().getCurrency().equals(c)) t.getFromAccount().setCurrency(c);
+                if (t.getToAccount().getCurrency().equals(c)) t.getToAccount().setCurrency(c);
+            }
+        }
+
+    }
+
+    private void clearBase(SaveData sd) {
+        if (base) {
+            rate = 1;
+            Currency old = (Currency) sd.getOldCommon();
+            for (Currency c : sd.getCurrencies()) {
+                if (!this.equals(c)) {
+                    c.setBase(false);
+                    if (old != null) c.setRate(c.rate / old.rate);
+                }
+            }
+        }
     }
 }
