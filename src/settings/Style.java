@@ -6,9 +6,44 @@ import java.awt.*;
 
 final public class Style {
 
+    public static final Color COLOR_BUTTON_BG_NORMAL = new Color(240, 240, 240);
+    public static final Color COLOR_BUTTON_BG_HOVER = Color.YELLOW;
+    public static final Color COLOR_LEFTPANEL_BALANCE = Color.WHITE;
+    public static final Color COLOR_EXP = new Color(200, 0, 0);
+    public static final Color COLOR_INCOME = new Color(0, 100, 0);
+    public static final Color COLOR_ON = Color.BLACK;
+    public static final Color COLOR_OFF = new Color(170, 170, 170);
+
+    public static final Font FONT_BUTTON_TOOLBAR = new Font("Roboto-Light", Font.BOLD, 14);
+    public static final Font FONT_MAIN_BUTTON = new Font("Roboto-Light", Font.BOLD, 14);
+    public static final Font FONT_DIALOG_LABEL = new Font("Roboto-Light", Font.BOLD, 12);
+    public static final Font FONT_LABEL_HEADER = new Font("Roboto-Light", Font.BOLD, 16);
+    public static final Font FONT_LABEL_LEFT_PANEL_CURRENCY = new Font("Roboto-Light", Font.BOLD, 14);
+    public static final Font FONT_LABEL_LEFT_PANEL_AMOUNT = new Font("Roboto-Light", Font.PLAIN, 14);
+    public static final Font FONT_TABLE_HEADER = new Font("Roboto-Light", Font.BOLD, 16);
+    public static final Font FONT_TABLE = new Font("Roboto-Light", Font.PLAIN, 14);
+    public static final Font FONT_BUTTON_FILTER = new Font("Roboto-Light", Font.BOLD, 12);
+
     public static final EmptyBorder BORDER_PANEL = new EmptyBorder(10, 10, 10, 10);
     public static final EmptyBorder BORDER_LEFT_PANEL = new EmptyBorder(0, 10, 10, 10);
     public static final EmptyBorder BORDER_MAIN_TOOLBAR = new EmptyBorder(10, 10, 10, 10);
+    public static final EmptyBorder BORDER_FUNCTIONS_TOOLBAR = new EmptyBorder(5, 5, 5, 5);
+    public static final EmptyBorder BORDER_DIALOG = new EmptyBorder(10, 10, 10, 10);
+    public static final EmptyBorder BORDER_FILTER_PANEL = new EmptyBorder(5, 0, 7, 0);
+
+    public static final Dimension DIMENSION_DIALOG_TEXTFIELD_SIZE = new Dimension(200, 25);
+    public static final Dimension DIMENSION_DIALOG_PADDING_BUTTON = new Dimension(10, 0);
+    public static final Dimension DIMENSION_PADDING_BALANCE = new Dimension(10, 0);
+    public static final Dimension DIMENSION_TABLE_SHOW_SIZE = new Dimension(850, 450);
+    public static final Dimension DIMENSION_CHART = new Dimension(868, 550);
+
+    public static final int PADDING_DIALOG = 10;
+    public static final int PADDING_BALANCE = 3;
+    public static final int PADDING_PANEL = 3;
+    public static final int PADDING_PANEL_BIG = 20;
+    public static final int PADDING_PANEL_EMPTY = 5;
+    public static final int TABLE_ADD_ROW_HEIGHT = 18;
+    public static final int WIDTH_FILTER_BUTTON = 200;
 
     public static final ImageIcon ICON_MENU_FILE = new ImageIcon("images/menu_file.png");
     public static final ImageIcon ICON_MENU_EDIT = new ImageIcon("images/menu_edit.png");
@@ -88,5 +123,4 @@ final public class Style {
     public static final ImageIcon ICON_PANEL_CURRENCIES = new ImageIcon("images/currencies_panel.png");
     public static final ImageIcon ICON_PANEL_STATISTICS = new ImageIcon("images/statistics_panel.png");
 
-    public static final Dimension DIMENSION_PADDING_BALANCE = new Dimension(10, 0);
 }

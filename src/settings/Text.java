@@ -13,11 +13,28 @@ final public class Text {
         return "";
     }
 
+    public static String[] getMonths() {
+        String[] months = new String[12];
+        months[0] = get("JANUARY");
+        months[1] = get("FEBRUARY");
+        months[2] = get("MARCH");
+        months[3] = get("APRIL");
+        months[4] = get("MAY");
+        months[5] = get("JUNE");
+        months[6] = get("JULY");
+        months[7] = get("AUGUST");
+        months[8] = get("SEPTEMBER");
+        months[9] = get("OCTOBER");
+        months[10] = get("NOVEMBER");
+        months[11] = get("DECEMBER");
+        return months;
+    }
+
     public static void init() {
         data.put("PROGRAMM_NAME", "Personal Finance");
 
         data.put("JANUARY", "January");
-        data.put("FEBRUAR", "February");
+        data.put("FEBRUARY", "February");
         data.put("MARCH", "March");
         data.put("APRIL", "April");
         data.put("MAY", "May");
