@@ -7,14 +7,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class MainButton extends JButton implements MouseListener {
+public class MainButton extends JButton {
 
     public MainButton(String title, ImageIcon icon, ActionListener listener, String action) {
         super(title);
         setIcon(icon);
         setActionCommand(action);
         addActionListener(listener);
-        addMouseListener(this);
+        addMouseListener(new HoverButton());
         setFont(Style.FONT_MAIN_BUTTON);
         setFocusPainted(false);
         setBackground(Style.COLOR_BUTTON_BG_NORMAL);
@@ -27,28 +27,26 @@ public class MainButton extends JButton implements MouseListener {
     public MainButton(ImageIcon icon, ActionListener listener, String action) {
         this("", icon, listener, action);
     }
-    @Override
-    public void mouseClicked(MouseEvent e) {
 
-    }
+    private class HoverButton implements MouseListener {
 
-    @Override
-    public void mousePressed(MouseEvent e) {
+        @Override
+        public void mouseClicked(MouseEvent me) {}
 
-    }
+        @Override
+        public void mousePressed(MouseEvent me) {}
 
-    @Override
-    public void mouseReleased(MouseEvent e) {
+        @Override
+        public void mouseReleased(MouseEvent me) {}
 
-    }
+        @Override
+        public void mouseEntered(MouseEvent me) {
+            ((MainButton) me.getSource()).setBackground(Style.COLOR_BUTTON_BG_HOVER);
+        }
 
-    @Override
-    public void mouseEntered(MouseEvent e) {
-        ((MainButton) e.getSource()).setBackground(Style.COLOR_BUTTON_BG_HOVER);
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-        ((MainButton) e.getSource()).setBackground(Style.COLOR_BUTTON_BG_NORMAL);
+        @Override
+        public void mouseExited(MouseEvent me) {
+            ((MainButton) me.getSource()).setBackground(Style.COLOR_BUTTON_BG_NORMAL);
+        }
     }
 }
