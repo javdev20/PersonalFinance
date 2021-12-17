@@ -8,10 +8,9 @@ import settings.Style;
 import settings.Text;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame implements Refresh{
 
     private final GridBagConstraints constraints;
     private final MainMenu mainMenu;
@@ -56,5 +55,11 @@ public class MainFrame extends JFrame {
         pack();
         setLocationRelativeTo(null);
 
+    }
+
+    @Override
+    public void refresh() {
+        SwingUtilities.updateComponentTreeUI(this);
+        pack();
     }
 }
