@@ -51,6 +51,7 @@ public class MainFrame extends JFrame implements Refresh{
         setIconImage(Style.ICON_MAIN.getImage());
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+        //add leftpanel
         setVisible(true);
         pack();
         setLocationRelativeTo(null);

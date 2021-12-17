@@ -7,8 +7,7 @@ import settings.Text;
 public final class MainToolBar extends AbstractToolBar {
     
     public MainToolBar() {
-        super();
-        setBorder(Style.BORDER_MAIN_TOOLBAR);
+        super(Style.BORDER_FUNCTIONS_TOOLBAR);
         init();
     }
 

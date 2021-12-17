@@ -12,8 +12,8 @@ import javax.swing.border.EmptyBorder;
  */
 abstract public class AbstractToolBar extends JPanel implements Refresh {
 
-    public AbstractToolBar() {
-
+    public AbstractToolBar(EmptyBorder border) {
+        setBorder(border);
     }
     
     abstract protected void init();
