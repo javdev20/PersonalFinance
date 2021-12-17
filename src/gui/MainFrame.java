@@ -19,7 +19,7 @@ public class MainFrame extends JFrame implements Refresh{
     private final MainToolBar toolBar;
 
     public MainFrame() {
-        super(Text.get("PROGRAMM_NAME"));
+        super(Text.get("PROGRAM_NAME"));
 
         mainMenu = new MainMenu(this);
         setJMenuBar(mainMenu);
@@ -60,6 +60,7 @@ public class MainFrame extends JFrame implements Refresh{
     @Override
     public void refresh() {
         SwingUtilities.updateComponentTreeUI(this);
+        mainMenu.refresh();
         pack();
     }
 }
