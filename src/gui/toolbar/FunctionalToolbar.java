@@ -12,7 +12,7 @@ public class FunctionalToolbar extends AbstractToolBar implements EnableEditDele
     private MainButton deleteButton;
 
     public FunctionalToolbar() {
-        super();
+        super(Style.BORDER_FUNCTIONS_TOOLBAR);
         init();
     }
 

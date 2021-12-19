@@ -1,5 +1,8 @@
 package gui;
 
+import gui.dialog.CurrencyAddEditDialog;
+import gui.dialog.TransactionAddEditDialog;
+import gui.dialog.TransferAddEditDialog;
 import gui.menu.MainMenu;
 import gui.panel.LeftPanel;
 import gui.panel.RightPanel;
@@ -19,7 +22,9 @@ public class MainFrame extends JFrame implements Refresh{
     private final MainToolBar toolBar;
 
     public MainFrame() {
+
         super(Text.get("PROGRAM_NAME"));
+        new CurrencyAddEditDialog(this).showDialog();
 
         mainMenu = new MainMenu(this);
         setJMenuBar(mainMenu);

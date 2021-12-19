@@ -31,7 +31,7 @@ final public class Text {
     }
 
     public static void init() {
-        data.put("PROGRAMM_NAME", "Personal Finance");
+        data.put("PROGRAM_NAME", "Personal Finance");
 
         data.put("JANUARY", "January");
         data.put("FEBRUARY", "February");
